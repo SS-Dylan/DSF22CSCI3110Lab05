@@ -1,7 +1,11 @@
+using DSF22CSCI3110Lab05.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<HttpClient>();
+builder.Services.AddScoped<IVideoGameRepository, WebAPIVideoGameRepository>();
 
 var app = builder.Build();
 

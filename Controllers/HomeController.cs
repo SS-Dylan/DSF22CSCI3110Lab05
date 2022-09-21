@@ -15,7 +15,7 @@ namespace DSF22CSCI3110Lab05.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "VideoGame");
         }
 
         public IActionResult Privacy()
